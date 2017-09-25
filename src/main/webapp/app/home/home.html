@@ -1,0 +1,77 @@
+<div ng-cloak>
+    <div class="row">
+        <div class="col-md-6">
+            <span class="support img-responsive img-rounded"></span>
+        </div>
+        <div class="col-md-6">
+
+            <h1>CodeFest DashBoard</h1>
+            <p class="lead">This is your login page</p><br>
+            <form class="form-horizontal" ng-show="!vm.success" name="form" role="form" novalidate
+                  ng-submit="vm.register()"
+                  show-validation>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-2">
+                            <label class="control-label" for="login">User name</label>
+                        </div>
+                        <div class="col-md-4 offset-md-2">
+                            <input type="text" class="form-control" id="login" name="login"
+                                   ng-model="vm.registerAccount.login" ng-minlength=1 ng-maxlength=50
+                                   ng-pattern="/^[_'.@A-Za-z0-9-]*$/" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-2">
+                            <label class="control-label" for="password">Password</label>
+                        </div>
+
+                        <div class="col-md-4 offset-md-2">
+                            <input type="password" class="form-control" id="password" name="password"
+                                   ng-model="vm.registerAccount.password" ng-minlength=4 ng-maxlength=50 required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-2">
+                            <label class="control-label" for="password">Access Rights</label>
+                        </div>
+                        <div class="col-md-4 offset-md-2" uib-dropdown class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" uib-dropdown-toggle type="button"
+                                    data-toggle="dropdown">Access Rights
+                                <span class="caret"></span></button>
+
+                            <ul class="dropdown-menu" uib-dropdown-menu>
+                                <li><a href="#">Admin</a></li>
+                                <li><a href="#">Lecturer</a></li>
+                                <li><a href="#">Committee Member</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <img src="../content/images/forgot-password.gif" class="forgot"></img>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <div ng-switch="vm.isAuthenticated()">
+                <div class="alert alert-success" ng-switch-when="true">
+                    You are logged in as user "{{vm.account.login}}".
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
