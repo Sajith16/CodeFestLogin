@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "userName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "password",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rights",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170927033503",
+    "entityTableName": "login_fest",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

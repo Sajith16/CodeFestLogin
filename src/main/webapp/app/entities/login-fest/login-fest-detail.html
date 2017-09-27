@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span>Login Fest</span> {{vm.loginFest.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>User Name</span></dt>
+        <dd>
+            <span>{{vm.loginFest.userName}}</span>
+        </dd>
+        <dt><span>Password</span></dt>
+        <dd>
+            <span>{{vm.loginFest.password}}</span>
+        </dd>
+        <dt><span>Rights</span></dt>
+        <dd>
+            <span>{{vm.loginFest.rights}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="login-fest-detail.edit({id:vm.loginFest.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

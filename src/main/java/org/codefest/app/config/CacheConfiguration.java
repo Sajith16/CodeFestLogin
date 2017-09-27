@@ -41,6 +41,7 @@ public class CacheConfiguration {
             cm.createCache(org.codefest.app.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(org.codefest.app.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(org.codefest.app.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(org.codefest.app.domain.LoginFest.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
